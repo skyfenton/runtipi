@@ -3,10 +3,17 @@
   "features": {
     "ghcr.io/devcontainers/features/docker-in-docker": {
       "version": "latest",
-      "moby": true
+      "moby": false
     }
   },
-  "extensions": ["ms-azuretools.vscode-docker", "ms-vscode.vscode-typescript-next", "waderyan.gitblame"],
+  "customizations": {
+    "codespaces": {
+      "extensions": ["ms-azuretools.vscode-docker", "ms-vscode.vscode-typescript-next"]
+    },
+    "vscode": {
+      "extensions": ["ms-vscode.vscode-typescript-next"]
+    }
+  },
   "postCreateCommand": "./.devcontainer/postCreateCommand.sh",
   "forwardPorts": [80, 3000],
   "portsAttributes": {

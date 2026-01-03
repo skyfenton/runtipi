@@ -2,8 +2,8 @@
 echo '{ 
     "appsRepoUrl": "https://github.com/runtipi/runtipi-appstore.git/"
 }' > state/settings.json
-npm i -g pnpm
-pnpm i
+npm i -g bun
+bun i
 sudo apt-get update
 sudo apt-get install jq fswatch -y
 mkdir logs
